@@ -11,10 +11,11 @@ RUN apt-get update && apt-get install -y \
     && mkdir -p /out /in
 
 COPY ./requirements.txt requirements.txt
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install -r requirements.txt && pip install debugpy
 
-RUN useradd -ms /bin/bash pcd && mkdir -p /home/pcd/.config && chown -R pcd:pcd /home/pcd
-USER pcd
+
+RUN useradd -ms /bin/bash roman && mkdir -p /home/roman/.config && chown -R roman:roman /home/roman
+USER roman
 
 
 CMD ["/bin/bash"]
