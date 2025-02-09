@@ -22,8 +22,9 @@
     }
   },
   "runArgs": [
-    "--network=host",
-    // "--gpus=all"
+    "--network=host"
+    // "--gpus=all",
+    // "--runtime=nvidia"
   ],
   "workspaceFolder": "/workspace",
   "remoteUser": "roman",
