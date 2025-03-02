@@ -6,8 +6,9 @@
   "features": {
     "ghcr.io/devcontainers/features/nix:1": {
       "useAttributePath": true,
-      "packages": "nixpkgs.neovim, nixpkgs.zoxide, nixpkgs.nushell, nixpkgs.nodejs_23, nixpkgs.lazygit, nixpkgs.fzf, nixpkgs.ripgrep"
-    }// ,
+      "packages": "nixpkgs.neovim, nixpkgs.zoxide, nixpkgs.nushell, nixpkgs.nodejs_23, nixpkgs.lazygit, nixpkgs.fzf, nixpkgs.ripgrep, nixpkgs.yazi"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
     //"ghcr.io/devcontainers/features/nvidia:1": {}
   },
   "customizations": {
@@ -27,10 +28,11 @@
     // "--runtime=nvidia"
   ],
   "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
   "remoteUser": "roman",
   "mounts": [
-    "source=${localWorkspaceFolder},target=/in,type=bind,consistency=cached",
-    "source=${localWorkspaceFolder},target=/out,type=bind,consistency=cached",
+    // "source=${localWorkspaceFolder},target=/in,type=bind,consistency=cached",
+    // "source=${localWorkspaceFolder},target=/out,type=bind,consistency=cached",
   ]
 }
 
